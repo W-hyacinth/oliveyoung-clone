@@ -14,6 +14,11 @@ export default new Router({
       path: '/main',
       name: 'Main',
       component: () => import('@/views/Main')
+    },
+    {
+      path: '*',
+      name: 'Error',
+      component: () => import('@/views/Error')
     }
   ]
 })
