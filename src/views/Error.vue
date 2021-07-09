@@ -1,6 +1,6 @@
 <template>
   <div>
-    Not Found
+    {{ this.$route.params.code === '404' ? 'Not Found' : this.$route.params.code }}
   </div>
 </template>
 

@@ -17,6 +17,10 @@ export default new Router({
     },
     {
       path: '*',
+      redirect: '/error/404'
+    },
+    {
+      path: '/error/:code',
       name: 'Error',
       component: () => import('@/views/Error')
     }
