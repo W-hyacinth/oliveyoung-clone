@@ -1,0 +1,60 @@
+
+.main {
+}
+
+/* 버튼 */
+.btn {
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+.btn__bg--primary {
+  color: #fff;
+  background-color: #9bce26;
+}
+.btn__bg--darkgray {
+  color: #fff;
+  background-color: #666;
+}
+/* 버튼 - 사이즈 */
+.btn__size--lg {
+  padding: 20px 5px;
+  font-size: 20px;
+}
+.btn__group {
+  display: flex;
+  .btn {
+    flex: 1 1 auto;
+  }
+}
+.btn__group--row {
+  flex-direction: row;
+  .btn {
+    &:nth-of-type(n+2) {
+      margin-left: 8px;
+    }
+  }
+}
+.btn__group--column {
+  flex-direction: column;
+  .btn {
+    &:nth-of-type(n+2) {
+      margin-top: 10px;
+    }
+  }
+}
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+**/
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
