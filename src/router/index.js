@@ -16,6 +16,11 @@ export default new Router({
       component: () => import('@/views/Main')
     },
     {
+      path: '/login',
+      name: 'Login',
+      component: () => import('@/views/Login')
+    },
+    {
       path: '*',
       redirect: '/error/404'
     },

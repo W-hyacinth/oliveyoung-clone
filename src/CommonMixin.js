@@ -3,6 +3,7 @@ import Vue from 'vue'
 Vue.mixin({
   data () {
     return {
+      isLogin: false,
       isMobile: null
     }
   },

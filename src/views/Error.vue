@@ -1,5 +1,5 @@
 <template>
-  <main class="error-main">
+  <main id="main" class="error-main">
     <div class="cont">
       <h1 class="olive__logo">
         <a href="/" class="olive__link"><span class="visually-hidden">올리브영 로고</span></a>
@@ -59,6 +59,7 @@ export default {
     justify-content: center;
     align-items: center;
     padding: 20px 0;
+    min-height: 100vh;
     .cont {
       padding: 0 16px;
       display: flex;
@@ -68,7 +69,7 @@ export default {
     .olive__logo {
       width: 70%;
       max-width: 248px;
-      margin: 0 auto 40px;
+      margin: 0 auto 30px;
     }
     .olive__link {
       display: block;

@@ -1,20 +1,14 @@
 <template>
-  <div id="app">
-    <header class="header">헤더</header>
-    <router-view/>
-    <Footer />
-  </div>
+  <router-view/>
 </template>
 
 <script>
 import 'reset-css'
 import './assets/scss/common.scss'
 import './CommonMixin'
-import Footer from './components/Footer'
 export default {
-  name: 'App',
+  name: 'SingleApp',
   components: {
-    Footer
   }
 }
 </script>
