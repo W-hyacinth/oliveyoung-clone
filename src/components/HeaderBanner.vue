@@ -4,7 +4,7 @@
       <span class="header-banner__msg">APP 첫구매 <strong class="header-banner__msg--highlight">5천원 할인 쿠폰과 추가혜택! </strong>받기</span>
     </a>
     <button type="button" class="header-banner__btn" aria-label="배너 오늘 하루 닫기" @click="closeBanner">
-      <IconClose color="#fff" />
+      <IconClose color="#fff" title="닫기 아이콘" />
     </button>
   </article>
 </template>
@@ -52,8 +52,8 @@ export default {
   word-wrap: break-word;
   &:before {
     display: block;
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
     margin-right: 6px;
     background: url('~@/assets/images/common/ico_app.png') center center / 32px no-repeat;
     content: "";
