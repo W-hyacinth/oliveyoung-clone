@@ -25,17 +25,19 @@ export default {
     }
   },
   methods: {
-    fetchData: async function () {
+    fetchSearchData: async function () {
       try {
         const response = await axios.get('/static/js/headerSearch.json')
-        this.searchData = response.data.product
+        const keywordLength = response.data.length
+        const pickNumber = Math.floor(Math.random() * keywordLength)
+        this.searchData = response.data[pickNumber]
       } catch (error) {
         console.error(error)
       }
     }
   },
   created () {
-    this.fetchData()
+    this.fetchSearchData()
   }
 }
 </script>

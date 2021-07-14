@@ -1,6 +1,30 @@
-{
-  "product": {
+[
+  {
     "name" : "헤라 블랙쿠션 보더리스 컬러 출시💖",
     "detail_url" : "https://m.oliveyoung.co.kr/m/planshop/getPlanShopDetail.do?dispCatNo=500000101430189"
+  },
+  {
+    "name" : "닥터브로너스 대용량 구매시 펌프 증정~ing",
+    "detail_url" : "https://m.oliveyoung.co.kr/m/planshop/getPlanShopDetail.do?dispCatNo=500000101980005"
+  },
+  {
+    "name" : "💙올인원 몸매관리 with 바이탈헬스💙",
+    "detail_url" : "https://m.oliveyoung.co.kr/m/planshop/getPlanShopDetail.do?dispCatNo=500000101870032"
+  },
+  {
+    "name" : "6년 연속 1등 모공팩 할인중★",
+    "detail_url" : "https://m.oliveyoung.co.kr/m/goods/getGoodsDetail.do?goodsNo=A000000010180"
+  },
+  {
+    "name" : "★여름에 딱! 비타민 쿠션 특가할인★",
+    "detail_url" : "https://m.oliveyoung.co.kr/m/goods/getGoodsDetail.do?goodsNo=A000000153330"
+  },
+  {
+    "name" : "따끈따끈 신상치약 보러가기👉",
+    "detail_url" : "https://m.oliveyoung.co.kr/m/planshop/getPlanShopDetail.do?dispCatNo=500000101480098"
+  },
+  {
+    "name" : "이지덤뷰티 스팟패치 증정 받기 💜",
+    "detail_url" : "https://m.oliveyoung.co.kr/m/planshop/getPlanShopDetail.do?dispCatNo=500000101510068"
   }
-}
+]
