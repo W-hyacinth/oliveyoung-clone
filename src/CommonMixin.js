@@ -3,6 +3,7 @@ import Vue from 'vue'
 Vue.mixin({
   data () {
     return {
+      isLoading: false,
       isLogin: false,
       isMobile: null
     }
@@ -11,7 +12,7 @@ Vue.mixin({
     checkMobileResolution: function () {
       this.isMobile = (window.innerWidth < 1020)
     },
-    commingSoon: function () {
+    comingSoon: function () {
       alert('서비스 준비중입니다.')
     },
     goBack: function () {
