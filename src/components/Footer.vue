@@ -3,21 +3,21 @@
     <article class="footer__article footer-login">
       <div class="conts">
         <div class="footer-login__menu">
-          <a :href="loginBtnUrl" class="footer-login__link">{{ loginBtnTxt }}</a>
-          <a href="" class="footer-login__link" @click.prevent="commingSoon">PC버전보기</a>
-          <a href="" class="footer-login__link" @click.prevent="commingSoon">고객센터</a>
+          <router-link :to="loginBtnUrl" class="footer-login__link">{{ loginBtnTxt }}</router-link>
+          <a href="" class="footer-login__link" @click.prevent="comingSoon">PC버전보기</a>
+          <a href="" class="footer-login__link" @click.prevent="comingSoon">고객센터</a>
         </div>
       </div>
     </article>
     <!-- <article class="footer__article footer-corp">
       <div class="conts">
         <ul class="footer-corp__menu">
-          <li class="footer-corp__list"><a href="" class="footer-corp__link" @click.prevent="commingSoon">회사소개</a></li>
-          <li class="footer-corp__list"><a href="" class="footer-corp__link" @click.prevent="commingSoon">채용안내</a></li>
-          <li class="footer-corp__list"><a href="" class="footer-corp__link" @click.prevent="commingSoon">가맹점 개설문의</a></li>
-          <li class="footer-corp__list"><a href="" class="footer-corp__link" @click.prevent="commingSoon">상품입점 및 제휴문의</a></li>
-          <li class="footer-corp__list"><a href="" class="footer-corp__link" @click.prevent="commingSoon">사이버 감사실</a></li>
-          <li class="footer-corp__list"><a href="" class="footer-corp__link" @click.prevent="commingSoon">고객센터</a></li>
+          <li class="footer-corp__list"><a href="" class="footer-corp__link" @click.prevent="comingSoon">회사소개</a></li>
+          <li class="footer-corp__list"><a href="" class="footer-corp__link" @click.prevent="comingSoon">채용안내</a></li>
+          <li class="footer-corp__list"><a href="" class="footer-corp__link" @click.prevent="comingSoon">가맹점 개설문의</a></li>
+          <li class="footer-corp__list"><a href="" class="footer-corp__link" @click.prevent="comingSoon">상품입점 및 제휴문의</a></li>
+          <li class="footer-corp__list"><a href="" class="footer-corp__link" @click.prevent="comingSoon">사이버 감사실</a></li>
+          <li class="footer-corp__list"><a href="" class="footer-corp__link" @click.prevent="comingSoon">고객센터</a></li>
         </ul>
         <div class="footer-family">
           <button type="button" aria-label="CJ그룹 계열사" class="footer-family__btn">CJ그룹 계열사 바로가기</button>
@@ -56,7 +56,7 @@
               호스팅사업자 : CJ 올리브네트웍스
             </span>
             <span class="footer-info__item">
-              통신판매업신고번호 : <a href="" class="footer-info__link" @click.prevent="commingSoon">2019-서울용산-1428</a>
+              통신판매업신고번호 : <a href="" class="footer-info__link" @click.prevent="comingSoon">2019-서울용산-1428</a>
             </span>
             <span class="footer-info__item">
               이메일 : <a href="mailto:oliveweb@cj.net" class="footer-info__link footer-info__link--email">oliveweb@cj.net</a>
@@ -68,14 +68,14 @@
     <article class="footer__article footer-cs">
       <div class="conts">
         <div class="footer-cs__list footer-cs__list--board">
-          <a href="" @click="commingSoon" class="footer-cs__link footer-cs__link--board">고객센터</a>
+          <a href="" @click="comingSoon" class="footer-cs__link footer-cs__link--board">고객센터</a>
         </div>
         <div class="footer-cs__list footer-cs__list--tel">
           <a href="tel:15220882" data-tel="1522-0882" class="footer-cs__tel footer-cs__tel--online">온라인몰 고객센터</a>
           <a href="tel:15774887" data-tel="1577-4887" class="footer-cs__tel footer-cs__tel--store">매장고객센터</a>
         </div>
         <div class="footer-cs__list footer-cs__list--mypage">
-          <a href="" @click="commingSoon" class="footer-cs__link footer-cs__link--mypage">1:1<br>문의하기</a>
+          <a href="" @click="comingSoon" class="footer-cs__link footer-cs__link--mypage">1:1<br>문의하기</a>
         </div>
       </div>
     </article>
