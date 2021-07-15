@@ -76,6 +76,7 @@ export default {
   justify-content: center;
   position: relative;
   height: 45px;
+  background-color: #fff;
   border-bottom: 1px solid #ddd;
   &:before,
   &:after {
@@ -114,6 +115,7 @@ export default {
   flex: 0 0 auto;
   display: block;
   padding: 0 5px;
+  margin-bottom: 15px;
   font-weight: 700;
   font-size: 16px;
   color: #000;
