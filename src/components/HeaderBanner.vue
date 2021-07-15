@@ -4,13 +4,13 @@
       <span class="header-banner__msg">APP 첫구매 <strong class="header-banner__msg--highlight">5천원 할인 쿠폰과 추가혜택! </strong>받기</span>
     </a>
     <button type="button" class="header-banner__btn" aria-label="배너 오늘 하루 닫기" @click="closeBanner">
-      <IconClose color="#fff" title="닫기 아이콘" />
+      <IconClose color="#fff" />
     </button>
   </article>
 </template>
 
 <script>
-import IconClose from '@/components/IconClose'
+import IconClose from '@/components/icon/IconClose'
 export default {
   name: 'HeaderBanner',
   methods: {
@@ -26,7 +26,7 @@ export default {
     oliveAppLink: function () {
       if (this.mobileDevice === 'ios') {
         return 'https://apps.apple.com/kr/app/%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81/id873779010'
-      } else if (this.mobileDevice === 'android') {
+      } else {
         return 'https://play.google.com/store/apps/details?id=com.oliveyoung&hl=ko&gl=US'
       }
     }
