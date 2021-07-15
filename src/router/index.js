@@ -28,6 +28,16 @@ export default new Router({
       path: '/error/:code',
       name: 'Error',
       component: () => import('@/views/Error')
+    },
+    {
+      path: '/ranking',
+      name: 'Ranking',
+      component: () => import('@/views/Ranking')
+    },
+    {
+      path: '/newarrival',
+      name: 'NewArrival',
+      component: () => import('@/views/NewArrival')
     }
   ]
 })

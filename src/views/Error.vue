@@ -11,7 +11,7 @@
         </div>
       </article>
       <div class="btn__group" :class="{'btn__group--column': isMobile, 'btn__group--row': !isMobile}">
-        <a href="/" class="btn btn__size--lg btn__bg--primary">메인 페이지</a>
+        <router-link to="/" class="btn btn__size--lg btn__bg--primary">메인 페이지</router-link>
         <a href="" class="btn btn__size--lg btn__bg--darkgray" @click.prevent="goBack">이전 페이지</a>
       </div>
     </div>
@@ -53,7 +53,6 @@ export default {
 <style lang="scss" scoped>
   @import '../assets/scss/helpers';
   .error-main {
-    flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
