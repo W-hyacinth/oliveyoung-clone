@@ -1,0 +1,114 @@
+[
+  {
+    "bannerName": "당근이세요? 올영갑니당_전사",
+    "bannerImage": "1.jpg",
+    "bannerUrl": "https://m.oliveyoung.co.kr/m/event/getEventDetail.do?evtNo=00000000007737&amp;trackingCd=Home_Planshop1_1_PROD",
+    "bannerDesc" : [],
+    "bannerDescColor": []
+  },
+  {
+    "bannerName": "즐거운동행",
+    "bannerImage": "2.jpg",
+    "bannerUrl": "https://m.oliveyoung.co.kr/m/planshop/getPlanShopDetail.do?dispCatNo=500000101650076&amp;trackingCd=Home_Planshop1_2_PROD",
+    "bannerDesc" : [],
+    "bannerDescColor": []
+  },
+  {
+    "bannerName": "701-21_김서연",
+    "bannerImage": "3.jpg",
+    "bannerUrl": "https://m.oliveyoung.co.kr/m/planshop/getPlanShopDetail.do?dispCatNo=500000101820054&amp;trackingCd=Home_Planshop1_3_PROD",
+    "bannerDesc" : ["블랙헤드&amp;모공피지", "마녀공장으로 한번에", "#전구매증정"],
+    "bannerDescColor": []
+  },
+  {
+    "bannerName": "701-21_김서연",
+    "bannerImage": "4.jpg",
+    "bannerUrl": "https://m.oliveyoung.co.kr/m/planshop/getPlanShopDetail.do?dispCatNo=500000101830032&amp;trackingCd=Home_Planshop1_4_PROD",
+    "bannerDesc" : ["씨케이디 런칭특가", "겉탱속촉 콜라겐", "#Upto50% #증정까지"],
+    "bannerDescColor": ["#fff","#fff","#fff"]
+  },
+  {
+    "bannerName": "701-153_이지은",
+    "bannerImage": "5.jpg",
+    "bannerUrl": "https://m.oliveyoung.co.kr/m/planshop/getPlanShopDetail.do?dispCatNo=500000101510066&amp;trackingCd=Home_Planshop1_5_PROD",
+    "bannerDesc" : ["가격은 그대로", "용량은 UP!", "넥스케어 MAX43%+증정"],
+    "bannerDescColor": []
+  },
+  {
+    "bannerName": "701-77_김예나",
+    "bannerImage": "6.jpg",
+    "bannerUrl": "https://m.oliveyoung.co.kr/m/planshop/getPlanShopDetail.do?dispCatNo=500000101840078&amp;trackingCd=Home_Planshop1_6_PROD",
+    "bannerDesc" : ["#구름결 밀착", "네오 완전체!", "#올리브영 단독기획"],
+    "bannerDescColor": []
+  },
+  {
+    "bannerName": "네일 파워팩",
+    "bannerImage": "7.jpg",
+    "bannerUrl": "https://m.oliveyoung.co.kr/m/planshop/getPlanShopDetail.do?dispCatNo=500000101840080&amp;trackingCd=Home_Planshop1_7_PROD",
+    "bannerDesc" : ["올여름 트렌드는?", "#요즘Shop네일!", "데싱디바/웨이크메이크"],
+    "bannerDescColor": []
+  },
+  {
+    "bannerName": "701-89_윤소영",
+    "bannerImage": "8.jpg",
+    "bannerUrl": "https://m.oliveyoung.co.kr/m/planshop/getPlanShopDetail.do?dispCatNo=500000101980004&amp;trackingCd=Home_Planshop1_8_PROD",
+    "bannerDesc" : ["최대50%할인", "향기쿨링샤워", "#닥터브로너스 #바디판타지"],
+    "bannerDescColor": []
+  },
+  {
+    "bannerName": "701-98_윤소영",
+    "bannerImage": "9.jpg",
+    "bannerUrl": "https://m.oliveyoung.co.kr/m/planshop/getPlanShopDetail.do?dispCatNo=500000101800060&amp;trackingCd=Home_Planshop1_9_PROD",
+    "bannerDesc" : ["로레알파리/미쟝센", "손상모&amp;컬러케어😎", "#MAX64% #쏟아지는신상"],
+    "bannerDescColor": []
+  },
+  {
+    "bannerName": "701-212_오지혜",
+    "bannerImage": "10.jpg",
+    "bannerUrl": "https://m.oliveyoung.co.kr/m/planshop/getPlanShopDetail.do?dispCatNo=500000101730022&amp;trackingCd=Home_Planshop1_10_PROD",
+    "bannerDesc" : ["아이,참 예쁘다♥", "갓성비 기획 모음 ", "#아이메이크업의 모든 것"],
+    "bannerDescColor": []
+  },
+  {
+    "bannerName": "701-11_박수영",
+    "bannerImage": "11.jpg",
+    "bannerUrl": "https://m.oliveyoung.co.kr/m/planshop/getPlanShopDetail.do?dispCatNo=500000101850043&amp;trackingCd=Home_Planshop1_11_PROD",
+    "bannerDesc" : ["제대로 물만난 피부💦", "최대 51% 할인✨", "수분 고민 멈춰✋🏻"],
+    "bannerDescColor": []
+  },
+  {
+    "bannerName": "701-01_정형민",
+    "bannerImage": "12.jpg",
+    "bannerUrl": "https://m.oliveyoung.co.kr/m/planshop/getPlanShopDetail.do?dispCatNo=500000101790075&amp;trackingCd=Home_Planshop1_12_PROD",
+    "bannerDesc" : ["여름철 스킨케어", "쿨린진정&amp;완벽차단", "#리얼베리어 #AHC"],
+    "bannerDescColor": []
+  },
+  {
+    "bannerName": "701-76_김예나",
+    "bannerImage": "13.jpg",
+    "bannerUrl": "https://m.oliveyoung.co.kr/m/planshop/getPlanShopDetail.do?dispCatNo=500000101840077&amp;trackingCd=Home_Planshop1_13_PROD",
+    "bannerDesc" : ["강렬한 여름", "더HOT한메이크업!", "힌스/라네즈/에뛰드"],
+    "bannerDescColor": []
+  },
+  {
+    "bannerName": "멤버십 혜택 100% 활용법_고영은",
+    "bannerImage": "14.jpg",
+    "bannerUrl": "https://m.oliveyoung.co.kr/m/event/getEventDetail.do?evtNo=00000000007772&amp;trackingCd=Home_Planshop1_14_PROD",
+    "bannerDesc" : [],
+    "bannerDescColor": []
+  },
+  {
+    "bannerName": "올라이브 웨이크메이크&amp;필리밀리_황현진",
+    "bannerImage": "15.jpg",
+    "bannerUrl": "https://m.oliveyoung.co.kr/m/event/getEventDetail.do?evtNo=00000000007749&amp;trackingCd=Home_Planshop1_15_PROD",
+    "bannerDesc" : [],
+    "bannerDescColor": []
+  },
+  {
+    "bannerName": "오늘드림! 홈캉스를 부탁해_조우리",
+    "bannerImage": "16.jpg",
+    "bannerUrl": "https://m.oliveyoung.co.kr/m/planshop/getPlanShopDetail.do?dispCatNo=500000101180038&amp;trackingCd=Home_Planshop1_16_PROD",
+    "bannerDesc" : ["오늘드림 홈캉스 ", "천일홍 디퓨저 증정!", "#5만원 이상 구매 시"],
+    "bannerDescColor": ["#fff", "#fff", "#fff"]
+  }
+]
