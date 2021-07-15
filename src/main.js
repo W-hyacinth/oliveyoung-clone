@@ -3,24 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import 'swiper/dist/css/swiper.min.css'
 
 Vue.config.productionTip = false
-
-const SingleApp = () => import('@/SingleApp')
-const singleAppArr = ['error', 'login']
-const isSinglePage = singleAppArr.filter(el => window.location.href.includes(el)).length
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  // components: { App },
-  components: (function () {
-    if (isSinglePage) {
-      return { App: SingleApp }
-    } else {
-      return { App }
-    }
-  })(),
+  components: { App },
   template: '<App/>'
 })
