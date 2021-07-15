@@ -11,26 +11,28 @@
           :bannerDescColor="bannerList[index].bannerDescColor"
           :aria-label="bannerList[index].bannerName" />
       </swiper-slide>
-      <div class="swiper-pagination" slot="pagination"></div>
+      <div v-if="bannerList.length > 1" class="swiper-pagination" slot="pagination"></div>
     </swiper>
-    <button type="button" class="main-banner__btn" aria-label="메인배너 전체보기" @click="isMainBannerModalClose = 'false'">
-      <IconPlus size="20" stroke="1" color="#fff" />
-    </button>
-    <PopupLayout
-      class="main-banner__modal"
-      :modalId="'modalMainBanner'"
-      :modalName="mainBannerModalName"
-      :isModalClose="isMainBannerModalClose"
-      @modalClose="isModalClose">
-      <MainBannerItem
-        v-for="(item, index) in bannerList"
-        :key="index"
-        :bannerLink="bannerList[index].bannerUrl"
-        :bannerImage="`${require(`@/assets/images/banner/${bannerList[index].bannerImage}`)}`"
-        :bannerDesc="bannerList[index].bannerDesc"
-        :bannerDescColor="bannerList[index].bannerDescColor"
-        :aria-label="bannerList[index].bannerName" />
-    </PopupLayout>
+    <template v-if="bannerList.length > 1">
+      <button type="button" class="main-banner__btn" aria-label="메인배너 전체보기" @click="isMainBannerModalClose = 'false'">
+        <IconPlus size="20" stroke="1" color="#fff" />
+      </button>
+      <PopupLayout
+        class="main-banner__modal"
+        :modalId="'modalMainBanner'"
+        :modalName="mainBannerModalName"
+        :isModalClose="isMainBannerModalClose"
+        @modalClose="isModalClose">
+        <MainBannerItem
+          v-for="(item, index) in bannerList"
+          :key="index"
+          :bannerLink="bannerList[index].bannerUrl"
+          :bannerImage="`${require(`@/assets/images/banner/${bannerList[index].bannerImage}`)}`"
+          :bannerDesc="bannerList[index].bannerDesc"
+          :bannerDescColor="bannerList[index].bannerDescColor"
+          :aria-label="bannerList[index].bannerName" />
+      </PopupLayout>
+    </template>
   </article>
 </template>
 
@@ -44,12 +46,14 @@ import IconPlus from '@/components/icon/IconPlus'
 export default {
   name: 'MainBanner',
   data () {
+    const _vm = this
     return {
       bannerList: [],
       isMainBannerModalClose: 'true',
       swiperOption: {
         slidesPerView: 1,
         loop: true,
+        watchOverflow: true,
         autoplay: {
           delay: 3500,
           disableOnInteraction: false
@@ -59,6 +63,12 @@ export default {
           type: 'fraction'
         },
         on: {
+          init: function () {
+            if (_vm.bannerList.length <= 1) {
+              this.params.autoplay = {}
+              this.allowTouchMove = false
+            }
+          }
         }
       }
     }
