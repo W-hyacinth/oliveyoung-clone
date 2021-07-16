@@ -4,14 +4,14 @@
     role="modal"
     aria-modal="true"
     :aria-labelledby="modalId"
-    :aria-hidden="isModalClose">
+    :aria-hidden="String(isModalClose)">
     <div class="modal-header">
       <h1 :id="modalId" class="modal-header__title">{{ modalName }}</h1>
     </div>
     <article class="modal__article">
       <slot name="default"></slot>
     </article>
-    <button type="button" class="modal__btn modal__btn--close" :aria-label="`${modalName} 모달 팝업 닫기`" @click="modalClose">
+    <button type="button" class="modal__btn modal__btn--close" :aria-label="`${modalName} 모달 팝업 닫기`" @click="modalClose(true)">
       <IconClose />
     </button>
   </section>
@@ -23,6 +23,7 @@ export default {
   name: 'PopupLayout',
   data () {
     return {
+      isModalClose: true
     }
   },
   props: {
@@ -36,18 +37,11 @@ export default {
     modalName: {
       type: String,
       default: '팝업제목'
-    },
-    isModalClose: {
-      type: String,
-      default: 'true',
-      validator: function (value) {
-        return ['true', 'false'].indexOf(value) !== -1
-      }
     }
   },
   methods: {
-    modalClose: function () {
-      this.$emit('modalClose', 'true')
+    modalClose: function (val) {
+      this.isModalClose = val
     }
   },
   components: {
@@ -93,5 +87,6 @@ export default {
   position: absolute;
   top: 15px;
   right: 16px;
+  cursor: pointer;
 }
 </style>

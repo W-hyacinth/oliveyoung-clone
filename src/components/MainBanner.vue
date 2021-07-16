@@ -14,15 +14,14 @@
       <div v-if="bannerList.length > 1" class="swiper-pagination" slot="pagination"></div>
     </swiper>
     <template v-if="bannerList.length > 1">
-      <button type="button" class="main-banner__btn" aria-label="메인배너 전체보기" @click="isMainBannerModalClose = 'false'">
+      <button type="button" class="main-banner__btn" aria-label="메인배너 전체보기" @click="$refs.mainBannerModal.modalClose(false)">
         <IconPlus size="20" stroke="1" color="#fff" />
       </button>
       <PopupLayout
         class="main-banner__modal"
+        ref="mainBannerModal"
         :modalId="'modalMainBanner'"
-        :modalName="mainBannerModalName"
-        :isModalClose="isMainBannerModalClose"
-        @modalClose="isModalClose">
+        :modalName="mainBannerModalName">
         <MainBannerItem
           v-for="(item, index) in bannerList"
           :key="index"
@@ -49,7 +48,6 @@ export default {
     const _vm = this
     return {
       bannerList: [],
-      isMainBannerModalClose: 'true',
       swiperOption: {
         slidesPerView: 1,
         loop: true,
@@ -84,9 +82,6 @@ export default {
         this.isLoading = true
       } catch (error) {
       }
-    },
-    isModalClose: function (val) {
-      this.isMainBannerModalClose = val
     }
   },
   computed: {
@@ -167,6 +162,7 @@ export default {
   height: 26px;
   border-radius: 50%;
   background-color: rgba(0,0,0,0.5);
+  cursor: pointer;
   z-index: 1;
 }
 .main-banner__modal {
