@@ -5,7 +5,7 @@
         v-for="(item, index) in bannerList"
         :key="index">
         <MainBannerItem
-          :bannerLink="bannerList[index].bannerUrl"
+          :bannerLink="bannerList[index].linkUrl"
           :bannerImage="`${require(`@/assets/images/banner/${bannerList[index].bannerImage}`)}`"
           :bannerDesc="bannerList[index].bannerDesc"
           :bannerDescColor="bannerList[index].bannerDescColor"
@@ -25,7 +25,7 @@
         <MainBannerItem
           v-for="(item, index) in bannerList"
           :key="index"
-          :bannerLink="bannerList[index].bannerUrl"
+          :bannerLink="bannerList[index].linkUrl"
           :bannerImage="`${require(`@/assets/images/banner/${bannerList[index].bannerImage}`)}`"
           :bannerDesc="bannerList[index].bannerDesc"
           :bannerDescColor="bannerList[index].bannerDescColor"
