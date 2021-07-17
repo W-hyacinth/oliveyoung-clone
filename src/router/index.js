@@ -30,6 +30,24 @@ export default new Router({
       component: () => import('@/views/Error')
     },
     {
+      path: '/search',
+      name: 'Search',
+      component: () => import('@/views/Search')
+      // children: [
+      //   {
+      //     path: '',
+      //     name: 'SearchMain',
+      //     component: () => import('@/views/SearchMain')
+      //   },
+      //   {
+      //     path: '',
+      //     name: 'SearchResult',
+      //     props: (route) => ({ query: route.query.q }),
+      //     component: () => import('@/views/SearchResult')
+      //   }
+      // ]
+    },
+    {
       path: '/ranking',
       name: 'Ranking',
       component: () => import('@/views/Ranking')

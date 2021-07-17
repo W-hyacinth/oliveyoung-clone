@@ -1,0 +1,206 @@
+{
+  "ark": {
+      "responsestatus":0,
+      "result":[
+          {
+              "totalcount":7,
+              "items":[
+                  {
+                      "hkeyword":"",
+                      "keyword":"쿠션",
+                      "count":64213,
+                      "type":2,
+                      "linkname":"",
+                      "linkurl":""
+                  },
+                  {
+                      "hkeyword":"",
+                      "keyword":"쿠션팩트",
+                      "count":4335,
+                      "type":2,
+                      "linkname":"",
+                      "linkurl":""
+                  },
+                  {
+                      "hkeyword":"",
+                      "keyword":"쿠션퍼프",
+                      "count":2595,
+                      "type":2,
+                      "linkname":"",
+                      "linkurl":""
+                  },
+                  {
+                      "hkeyword":"",
+                      "keyword":"쿠션파운데이션",
+                      "count":840,
+                      "type":2,
+                      "linkname":"",
+                      "linkurl":""
+                  },
+                  {
+                      "hkeyword":"",
+                      "keyword":"쿠션 퍼프",
+                      "count":819,
+                      "type":2,
+                      "linkname":"",
+                      "linkurl":""
+                  },
+                  {
+                      "hkeyword":"",
+                      "keyword":"쿠션 리필",
+                      "count":432,
+                      "type":2,
+                      "linkname":"",
+                      "linkurl":""
+                  },
+                  {
+                      "hkeyword":"",
+                      "keyword":"쿠션팡팡",
+                      "count":126,
+                      "type":2,
+                      "linkname":"",
+                      "linkurl":""
+                  }
+              ]
+          },
+          {
+              "totalcount":10,
+              "items":[
+                  {
+                      "hkeyword":"",
+                      "keyword":"선쿠션",
+                      "count":16229,
+                      "type":2,
+                      "linkname":"",
+                      "linkurl":""
+                  },
+                  {
+                      "hkeyword":"",
+                      "keyword":"네오쿠션",
+                      "count":11991,
+                      "type":2,
+                      "linkname":"",
+                      "linkurl":""
+                  },
+                  {
+                      "hkeyword":"",
+                      "keyword":"라네즈 네오쿠션",
+                      "count":8719,
+                      "type":2,
+                      "linkname":"",
+                      "linkurl":""
+                  },
+                  {
+                      "hkeyword":"",
+                      "keyword":"썬쿠션",
+                      "count":7735,
+                      "type":2,
+                      "linkname":"",
+                      "linkurl":""
+                  },
+                  {
+                      "hkeyword":"",
+                      "keyword":"클리오 쿠션",
+                      "count":7319,
+                      "type":2,
+                      "linkname":"",
+                      "linkurl":""
+                  },
+                  {
+                      "hkeyword":"",
+                      "keyword":"에스쁘아 쿠션",
+                      "count":6534,
+                      "type":2,
+                      "linkname":"",
+                      "linkurl":""
+                  },
+                  {
+                      "hkeyword":"",
+                      "keyword":"식물나라 선쿠션",
+                      "count":5338,
+                      "type":2,
+                      "linkname":"",
+                      "linkurl":""
+                  },
+                  {
+                      "hkeyword":"",
+                      "keyword":"헤라 블랙쿠션",
+                      "count":5049,
+                      "type":2,
+                      "linkname":"",
+                      "linkurl":""
+                  },
+                  {
+                      "hkeyword":"",
+                      "keyword":"정샘물 쿠션",
+                      "count":3083,
+                      "type":2,
+                      "linkname":"",
+                      "linkurl":""
+                  },
+                  {
+                      "hkeyword":"",
+                      "keyword":"킬커버 쿠션",
+                      "count":2462,
+                      "type":2,
+                      "linkname":"",
+                      "linkurl":""
+                  }
+              ]
+          }
+      ]
+  },
+  "arkBrand":{
+    "result" : {
+        "totalCount" : "0",
+        "items" : []
+    }
+  },
+  "arkCategory":{
+    "result" : {
+        "totalCount" : "4",
+        "items" : [
+            {
+                "DISP_CAT_NO" : "1000001000200010009",
+                "DISP_CAT_NM" : "쿠션",
+                "MID_CAT_NM" : "메이크업",
+                "MID_CAT_NO" : "10000010002",
+                "SML_CAT_NM" : "베이스메이크업",
+                "SML_CAT_NO" : "100000100020001",
+                "DTL_CAT_NM" : "<!HS>쿠션<!HE>",
+                "DTL_CAT_NO" : "1000001000200010009"
+            },
+            {
+                "DISP_CAT_NO" : "1000001000700080004",
+                "DISP_CAT_NM" : "쿠션/팩트",
+                "MID_CAT_NM" : "남성",
+                "MID_CAT_NO" : "10000010007",
+                "SML_CAT_NM" : "메이크업",
+                "SML_CAT_NO" : "100000100070008",
+                "DTL_CAT_NM" : "<!HS>쿠션<!HE>/팩트",
+                "DTL_CAT_NO" : "1000001000700080004"
+            },
+            {
+                "DISP_CAT_NO" : "1000001000800050001",
+                "DISP_CAT_NM" : "선쿠션",
+                "MID_CAT_NM" : "더모 코스메틱",
+                "MID_CAT_NO" : "10000010008",
+                "SML_CAT_NM" : "선케어",
+                "SML_CAT_NO" : "100000100080005",
+                "DTL_CAT_NM" : "선<!HS>쿠션<!HE>",
+                "DTL_CAT_NO" : "1000001000800050001"
+            },
+            {
+                "DISP_CAT_NO" : "1000001001100010003",
+                "DISP_CAT_NM" : "선쿠션/파우더",
+                "MID_CAT_NM" : "선케어",
+                "MID_CAT_NO" : "10000010011",
+                "SML_CAT_NM" : "선블록",
+                "SML_CAT_NO" : "100000100110001",
+                "DTL_CAT_NM" : "선<!HS>쿠션<!HE>/파우더",
+                "DTL_CAT_NO" : "1000001001100010003"
+            }
+        ]
+    }
+  }
+}
