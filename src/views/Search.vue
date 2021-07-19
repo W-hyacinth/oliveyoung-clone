@@ -3,7 +3,7 @@
     <article class="search-header">
       <form action="" @submit.prevent="onSubmit">
         <button type="button" @click="goBack">뒤로가기</button>
-        <InputText ref="searchInput" :value="query" @input="searchText" />
+        <InputText ref="searchInput" :value="query" @input="searchText" aria-label="" />
         <button v-if="query" type="reset" @click.prevent="onReset">검색어 삭제 버튼</button>
         <!-- <button type="button">검색</button> -->
       </form>
@@ -64,21 +64,18 @@ export default {
       this.query = ''
       this.searchPopularKeyword = []
     },
-    searchFetchData: async function (val) {
+    searchPopularData: async function (val) {
       try {
         this.searchPopularKeyword = []
+        const arr = []
         const response = await axios.get('/static/js/searchPopularKeyword.json')
         for (let x of response.data.ark.result) {
           for (let y of x.items) {
-            if (y.keyword.indexOf(val) >= 0) {
-              this.searchPopularKeyword.push(y)
-            }
+            arr.push(y)
           }
         }
 
-        this.searchPopularKeyword.sort((a, b) => {
-          return b['count'] - a['count']
-        })
+        this.searchPopularKeyword = arr.filter(el => el.keyword.indexOf(val) >= 0).sort((a, b) => { return b['count'] - a['count'] })
 
         this.matchPopularKeyword(val)
       } catch (error) {
@@ -98,11 +95,11 @@ export default {
   computed: {},
   watch: {
     query: function (val) {
-      this.searchFetchData(val)
+      this.searchPopularData(val)
     }
   },
   created () {
-    // this.searchFetchData()
+    // this.searchPopularData()
   },
   mounted () {
   },
