@@ -33,20 +33,13 @@ export default new Router({
       path: '/search',
       name: 'Search',
       component: () => import('@/views/Search')
-      // children: [
-      //   {
-      //     path: '',
-      //     name: 'SearchMain',
-      //     component: () => import('@/views/SearchMain')
-      //   },
-      //   {
-      //     path: '',
-      //     name: 'SearchResult',
-      //     props: (route) => ({ query: route.query.q }),
-      //     component: () => import('@/views/SearchResult')
-      //   }
-      // ]
     },
+    // {
+    //   path: '/search/result',
+    //   name: 'SearchResult',
+    //   props: (route) => ({ query: route.query.q }),
+    //   component: () => import('@/views/SearchResult')
+    // },
     {
       path: '/ranking',
       name: 'Ranking',
