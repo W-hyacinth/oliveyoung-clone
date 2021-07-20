@@ -4,9 +4,9 @@
       <router-link to="/" class="header__home"><span class="visually-hidden">올리브 영</span></router-link>
     </h1>
     <div class="header-search__group">
-        <router-link to="/search" class="header-search__link" :data-search-title="searchData.name">
+        <a href="/search" class="header-search__link" :data-search-title="searchData.name">
           <span class="visually-hidden">검색 페이지로 이동</span>
-        </router-link>
+        </a>
         <a :href="searchData.detail_url" class="header-product__link" @click.prevent="comingSoon">
           <span class="visually-hidden">{{ searchData.name }} 상세 페이지로 이동</span>
         </a>
