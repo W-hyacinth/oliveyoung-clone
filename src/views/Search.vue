@@ -87,7 +87,7 @@
           </section>
         </template>
       </template>
-      <article v-if="searchResult.length > 0 && isSubmit" class="search-result">
+      <article v-if="searchResult.length > 0 && isSubmit" class="search-result__article" :class="{'search-result__article--nodata': query !== searchableKeyword}">
         <template v-if="query === searchableKeyword">
           <ul class="prod__list">
             <li
@@ -99,9 +99,10 @@
           </ul>
         </template>
         <template v-else>
-          <p>
-            현재 고객님이 입력하신 검색어는 {{ query }} 입니다.<br>
-            그러나 이 사이트는 포트폴리오 용도로 재작되었기 때문에 {{ searchableKeyword }}으로 재검색 해주세요.
+          <IconCaution size="100" color="#e6e6e6" />
+          <p class="search-result__notice">
+            현재 고객님이 입력하신 검색어는 <span class="search-result__notice--highlight">{{ query }}</span> 입니다.<br>
+            그러나 이 사이트는 포트폴리오 용도로 재작되었기 때문에 <span class="search-result__notice--highlight">{{ searchableKeyword }}</span>으로 재검색 해주세요.
           </p>
         </template>
       </article>
@@ -116,6 +117,7 @@ import IconBack from '@/components/icon/IconBack'
 import IconDel from '@/components/icon/IconDel'
 import IconMenu from '@/components/icon/IconMenu'
 import IconSearch from '@/components/icon/IconSearch'
+import IconCaution from '@/components/icon/IconCaution'
 import InputText from '@/components/InputText'
 export default {
   name: 'Search',
@@ -267,12 +269,14 @@ export default {
     IconBack,
     IconMenu,
     IconSearch,
+    IconCaution,
     IconDel
   }
 }
 </script>
 
 <style lang="scss" scoped>
+$highlight : #f27370;
 .search__section {
   display: flex;
   flex-direction: column;
@@ -287,6 +291,8 @@ export default {
 }
 .search-main {
   flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
 }
 .search-header__form {
   display: flex;
@@ -495,6 +501,28 @@ export default {
   border-radius: 3px;
 }
 /deep/ .search__link--highlight {
-  color: #f27370;
+  color: $highlight;
+}
+.search-result__article {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  &--nodata {
+    justify-content: center;
+    align-items: center;
+  }
+}
+.search-result__notice {
+  margin: 20px 16px 0;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  line-height: 1.4;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+.search-result__notice--highlight {
+  font-weight: 700;
+  color: $highlight;
 }
 </style>
