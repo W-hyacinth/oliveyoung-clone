@@ -56,7 +56,7 @@
                 <a
                   :href="item.linkurl"
                   v-html="item.hkeyword"
-                  @click.prevent="onSubmit"
+                  @click.prevent="onResult"
                   class="search__link">
                 </a>
               </li>
@@ -74,7 +74,7 @@
                   v-for="(items, index) in searchPopularKeyword"
                   :key="index"
                   class="search-rank__item">
-                  <strong class="search-rank__name">{{items.searchTerm}}</strong>
+                  <a href="" class="search-rank__link" @click.prevent="onRankResult">{{items.searchTerm}}</a>
                   <div class="search-rank__status">
                     <span v-if="items.rankDiff !== 0" class="search-rank__cnt">{{ Math.abs(items.rankDiff) }}</span>
                     <em :class="rankDiffStatusClassName(items.rankDiff)">
@@ -94,7 +94,19 @@
               v-for="(item, prodIndex) in searchResult[0].Result"
               :key="prodIndex"
               class="prod__item">
-              {{ item.GOODS_NM }}
+              <a
+                :href="`https://m.oliveyoung.co.kr/m/goods/getGoodsDetail.do?goodsNo=${item.GOODS_NO}&dispCatNo=${item.DISP_CAT_NO}&trackingCd=Result_1`"
+                class="prod-thumb__link">
+                <span
+                  v-if="item.BEST_GOODS_YN === 'Y'"
+                  class="prod-thumb__flag prod-thumb__flag--best">베스트</span>
+                <em
+                  :style="{backgroundImage: `url('${customBackgroundUrl(item.IMG_PATH_NM)}')`}"
+                  :data-image-src="customBackgroundUrl(item.IMG_PATH_NM)"
+                  class="prod-thumb__image">
+                  <span class="visually-hidden">{{ item.GOODS_NM }} 상세 페이지로 이동</span>
+                </em>
+              </a>
             </li>
           </ul>
         </template>
@@ -153,6 +165,22 @@ export default {
   methods: {
     searchText: function (val) {
       this.query = val
+    },
+    onRankResult: function (e) {
+      const ePath = e.path || (e.composedPath && e.composedPath())
+      const areaArr = ePath.map(el => el.className)
+      const linkIdx = areaArr.indexOf('search-rank__link')
+
+      this.query = ePath[linkIdx].innerText.replace('\n', '')
+      this.onSubmit()
+    },
+    onResult: function (e) {
+      const ePath = e.path || (e.composedPath && e.composedPath())
+      const areaArr = ePath.map(el => el.className)
+      const linkIdx = areaArr.indexOf('search__link')
+
+      this.query = ePath[linkIdx].innerText.replace('\n', '')
+      this.onSubmit()
     },
     onSubmit: function (e) {
       if (!this.query) {
@@ -249,6 +277,9 @@ export default {
           el[tProperty] = el[sProperty]
         }
       })
+    },
+    customBackgroundUrl: function (url) {
+      return url ? `https://image.oliveyoung.co.kr/uploads/images/goods/${url}` : 'none'
     }
   },
   computed: {},
@@ -291,6 +322,7 @@ $highlight : #f27370;
   padding: 8px 20px 8px 16px;
   background-color: #fff;
   border-bottom: solid 2px #9bce26;
+  z-index: 10;
 }
 .search-main {
   flex: 1 1 auto;
@@ -370,7 +402,7 @@ $highlight : #f27370;
       border-top: 1px solid #eee;
     }
   }
-  &__name {
+  &__link {
     flex: 1 1 auto;
     overflow: hidden;
     display: block;
@@ -527,5 +559,62 @@ $highlight : #f27370;
 .search-result__notice--highlight {
   font-weight: 700;
   color: $highlight;
+}
+.prod__list {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 16px;
+}
+.prod__item {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 8px);
+}
+.prod-thumb__link {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 8px 0;
+  background-color: #efefef;
+}
+.prod-thumb__image {
+  flex: 0 1 auto;
+  width: 160px;
+  display: block;
+  background: center center / cover no-repeat;
+  mix-blend-mode: multiply;
+  &:before {
+    display: block;
+    padding-bottom: 100%;
+    // background-image: attr(data-image-src);
+    // background-image: 'url(' attr(data-image-src) ')';
+    content: "";
+  }
+}
+.prod-thumb__flag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 42px;
+  height: 42px;
+  font-weight: 700;
+  font-size: 12px;
+  color: transparent;
+  border: 3px solid transparent;
+  background-color: #dedede;
+  z-index: 1;
+  &--best {
+    color: #fff;
+    background-color: $highlight;
+  }
 }
 </style>

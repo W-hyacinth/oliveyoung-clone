@@ -41,7 +41,7 @@ export default {
   top: 150px;
   right: 20px;
   max-width: 180px;
-  padding: 8px;
+  padding: 9px;
   background-color: #fff;
   border: 3px solid #9bce26;
   border-radius: 3px;
