@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="wrap">
     <section class="header__section">
       <HeaderBanner v-if="isHeaderBannerDisplay" @showBanner="isHeaderBannerShow" />
       <Header />
@@ -9,6 +9,7 @@
       <slot name="default"></slot>
     </main>
     <Footer />
+    <SiteIntroBanner ref="SiteIntroBanner" />
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Menu from '@/components/Menu'
 import HeaderBanner from '@/components/HeaderBanner'
+import SiteIntroBanner from '@/components/SiteIntroBanner'
 export default {
   name: 'AppLayout',
   data () {
@@ -36,13 +38,14 @@ export default {
     Header,
     Footer,
     Menu,
-    HeaderBanner
+    HeaderBanner,
+    SiteIntroBanner
   }
 }
 </script>
 
 <style lang="scss" scoped>
-#app {
+#wrap {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
