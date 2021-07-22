@@ -24,43 +24,43 @@ export default {
         },
         {
           name: '오특',
-          path: '/login'
+          path: '/comingSoon'
         },
         {
           name: '신상',
-          path: '/newarrival'
+          path: '/comingSoon'
         },
         {
           name: '랭킹',
-          path: '/ranking'
+          path: '/comingSoon'
         },
         {
           name: '프리미엄관',
-          path: '/login'
+          path: '/comingSoon'
         },
         {
           name: '오늘드림',
-          path: '/login'
+          path: '/comingSoon'
         },
         {
           name: '기획전',
-          path: '/login'
+          path: '/comingSoon'
         },
         {
           name: '세일',
-          path: '/login'
+          path: '/comingSoon'
         },
         {
           name: '기프트카드',
-          path: '/login'
+          path: '/comingSoon'
         },
         {
           name: '맴버십/쿠폰',
-          path: '/login'
+          path: '/comingSoon'
         },
         {
           name: '이벤트',
-          path: '/login'
+          path: '/comingSoon'
         }
       ]
     }
