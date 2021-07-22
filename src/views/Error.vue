@@ -11,7 +11,7 @@
         </div>
       </article>
       <div class="btn__group" :class="{'btn__group--column': isMobile, 'btn__group--row': !isMobile}">
-        <router-link to="/" class="btn btn__size--lg btn__bg--primary">메인 페이지</router-link>
+        <router-link to="/main" class="btn btn__size--lg btn__bg--primary">메인 페이지</router-link>
         <a href="" class="btn btn__size--lg btn__bg--darkgray" @click.prevent="goBack">이전 페이지</a>
       </div>
     </div>
