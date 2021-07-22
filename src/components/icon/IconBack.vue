@@ -1,14 +1,16 @@
 <template>
-  <svg :width="size" :height="size" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <title>닫기 아이콘</title>
-    <path d="M18 6L6 18" :stroke="color" :stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M6 6L18 18" :stroke="color" :stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round"/>
+  <svg xmlns="http://www.w3.org/2000/svg" :width="size" :height="size" viewBox="0 0 24 24">
+    <title>뒤로가기 아이콘</title>
+    <g fill="none" fill-rule="evenodd">
+      <path d="M0 0H24V24H0z" transform="translate(-16 -40) translate(0 24) translate(16 16)"/>
+      <path :stroke="color" :stroke-width="stroke" d="M12 4L4 12 12 20" transform="translate(-16 -40) translate(0 24) translate(16 16)"/>
+    </g>
   </svg>
 </template>
 
 <script>
 export default {
-  name: 'IconClose',
+  name: 'IconBack',
   props: {
     size: {
       type: String,
@@ -19,7 +21,7 @@ export default {
     },
     stroke: {
       type: String,
-      default: '2',
+      default: '1.5',
       validator: function (value) {
         return !isNaN(parseInt(value)) || parseInt(value) <= 0
       }
