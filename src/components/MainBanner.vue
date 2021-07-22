@@ -150,6 +150,7 @@ export default {
 .main-banner__article {
   position: relative;
   padding-bottom: 76%;
+  background-color: #eee;
 }
 .main-banner__btn {
   position: absolute;
