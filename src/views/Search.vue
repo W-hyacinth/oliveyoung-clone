@@ -121,6 +121,9 @@ import IconCaution from '@/components/icon/IconCaution'
 import InputText from '@/components/InputText'
 export default {
   name: 'Search',
+  metaInfo: {
+    titleTemplate: '검색 | %s'
+  },
   data () {
     return {
       query: '',

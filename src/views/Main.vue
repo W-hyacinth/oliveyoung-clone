@@ -10,6 +10,9 @@ import MainBanner from '@/components/MainBanner'
 
 export default {
   name: 'Main',
+  metaInfo: {
+    titleTemplate: '메인 | %s'
+  },
   data () {
     return {
       isMainBannerLoading: true

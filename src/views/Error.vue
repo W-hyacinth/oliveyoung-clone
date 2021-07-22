@@ -21,6 +21,9 @@
 <script>
 export default {
   name: 'Error',
+  metaInfo: {
+    titleTemplate: '에러 | %s'
+  },
   data () {
     return {
       errorData: {
