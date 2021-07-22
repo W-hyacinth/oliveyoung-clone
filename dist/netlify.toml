@@ -1,4 +1,11 @@
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "*"
+  to = "/error/404"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/"
+  to = "https://w-hyacinth-oliveyoung.netlify.app/main"
   status = 200
+  force = true
