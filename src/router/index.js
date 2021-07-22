@@ -21,6 +21,11 @@ export default new Router({
       component: () => import('@/views/Login')
     },
     {
+      path: '/comingSoon',
+      name: 'ComingSoon',
+      component: () => import('@/views/ComingSoon')
+    },
+    {
       path: '*',
       redirect: '/error/404'
     },
