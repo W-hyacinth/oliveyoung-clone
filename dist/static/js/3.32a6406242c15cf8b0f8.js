@@ -1,0 +1,2 @@
+webpackJsonp([3],{XLej:function(e,t){},qNq7:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r={name:"ComingSoon",created:function(){alert("현재는 홈과 검색 페이지만 오픈되어 있어요.\n"),this.$router.go(-1)}},a={render:function(){var e=this.$createElement;return(this._self._c||e)("div")},staticRenderFns:[]};var o=n("VU/8")(r,a,!1,function(e){n("XLej")},"data-v-a8879144",null);t.default=o.exports}});
+//# sourceMappingURL=3.32a6406242c15cf8b0f8.js.map
