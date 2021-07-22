@@ -3,6 +3,9 @@
 * {
   box-sizing: border-box;
 }
+html, body {
+  min-height: 100vh;
+}
 [aria-hidden="true"] {
   display: none;
 }
@@ -12,6 +15,13 @@ a {
 button {
   padding: 0;
   background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  appearance: none;
+}
+input {
+  padding: 0;
+  margin: 0;
   border: 0;
   border-radius: 0;
   appearance: none;
