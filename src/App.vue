@@ -21,12 +21,12 @@ export default {
       {name: 'description', content: '올리브영 온라인 몰을 기반으로 Vuejs 프레임워크를 활용해 클론코딩한 포트폴리오 사이트입니다.'},
       {property: 'og:title', content: '[클론코딩] 올리브영 온라인몰'},
       {property: 'og:description', name: 'og:description', content: '올리브영 온라인 몰을 기반으로 Vuejs 프레임워크를 활용해 클론코딩한 포트폴리오 사이트입니다.'},
-      {property: 'og:url', content: window.location.href},
+      {property: 'og:url', content: `https://w-hyacinth-oliveyoung.netlify.app${window.location.pathname}`},
       {property: 'og:site_name', content: '[클론코딩] 올리브영 온라인몰'},
       {property: 'og:type', content: 'website'}
     ],
     link: [
-      {rel: 'canonical', href: window.location.href}
+      {rel: 'canonical', href: `https://w-hyacinth-oliveyoung.netlify.app${window.location.pathname}`}
     ]
   },
   components: {
