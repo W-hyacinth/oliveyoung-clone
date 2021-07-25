@@ -1,2 +1,0 @@
-webpackJsonp([6],{"9huS":function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a={name:"NewArrival",components:{AppLayout:n("LEUq").a}},r={render:function(){var e=this.$createElement;return(this._self._c||e)("AppLayout",[this._v("\n  신상 페이지\n")])},staticRenderFns:[]};var s=n("VU/8")(a,r,!1,function(e){n("sxjU")},"data-v-3d213503",null);t.default=s.exports},sxjU:function(e,t){}});
-//# sourceMappingURL=6.bd89f74d40a8d0004c76.js.map
