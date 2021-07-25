@@ -171,7 +171,7 @@ export default {
       const areaArr = ePath.map(el => el.className)
       const linkIdx = areaArr.indexOf('search-rank__link')
 
-      this.query = ePath[linkIdx].innerText.replace('\n', '')
+      this.query = ePath[linkIdx].innerText.split('\n').join('')
       this.onSubmit()
     },
     onResult: function (e) {
@@ -179,7 +179,7 @@ export default {
       const areaArr = ePath.map(el => el.className)
       const linkIdx = areaArr.indexOf('search__link')
 
-      this.query = ePath[linkIdx].innerText.replace('\n', '')
+      this.query = ePath[linkIdx].innerText.split('\n').join('')
       this.onSubmit()
     },
     onSubmit: function (e) {
