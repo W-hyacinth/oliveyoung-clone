@@ -36,6 +36,9 @@ Vue.mixin({
       this.$nextTick(() => {
         this.checkMobileResolution()
       })
+    },
+    numberWithComma: function (val) {
+      return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
     }
   },
   computed: {

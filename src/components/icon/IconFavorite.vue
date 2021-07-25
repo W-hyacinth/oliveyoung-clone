@@ -1,0 +1,35 @@
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" :width="size" :height="parseInt(size) - 1" viewBox="0 0 18 17">
+    <title>찜 아이콘</title>
+    <path :fill="color" fill-rule="evenodd" :stroke="strokeColor" d="M1.002 5.778c0 .052.006-.01.008.3-.005 0-.068.229.193 1.012.064.207.143.329.235.522C2.16 9.245 4.058 11.988 9 16c0 0 6.427-4.7 7.761-8.931.085-.252.145-.523.185-.792l.016-.117c.003-.019.005-.024.006-.024.003 0 .006.012.008.012.001 0 .003-.006.004-.024.003-.033.007-.045.01-.048.002-.308.009-.256.009-.308 0-2.559-2.149-4.71-4.8-4.71-1.23 0-2.35.412-3.2 1.148C8.152 1.47 7.033 1 5.802 1c-2.65 0-4.799 2.219-4.799 4.778z"/>
+  </svg>
+</template>
+
+<script>
+export default {
+  name: 'IconFavorite',
+  props: {
+    size: {
+      type: String,
+      default: '18',
+      validator: function (value) {
+        return !isNaN(parseInt(value)) || parseInt(value) <= 0
+      }
+    },
+    isActive: {
+      type: Boolean,
+      default: false
+    }
+  },
+  computed: {
+    color: function () {
+      const val = (this.isActive) ? '#9bce26' : 'none'
+      return val
+    },
+    strokeColor: function () {
+      const val = (this.isActive) ? '#9bce26' : '#000'
+      return val
+    }
+  }
+}
+</script>
