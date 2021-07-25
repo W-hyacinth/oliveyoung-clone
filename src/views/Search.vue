@@ -88,28 +88,9 @@
         </template>
       </template>
       <article v-if="searchResult.length > 0 && isSubmit" class="search-result__article" :class="{'search-result__article--nodata': query !== searchableKeyword}">
-        <template v-if="query === searchableKeyword">
-          <ul class="prod__list">
-            <li
-              v-for="(item, prodIndex) in searchResult[0].Result"
-              :key="prodIndex"
-              class="prod__item">
-              <a
-                :href="`https://m.oliveyoung.co.kr/m/goods/getGoodsDetail.do?goodsNo=${item.GOODS_NO}&dispCatNo=${item.DISP_CAT_NO}&trackingCd=Result_1`"
-                class="prod-thumb__link">
-                <span
-                  v-if="item.BEST_GOODS_YN === 'Y'"
-                  class="prod-thumb__flag prod-thumb__flag--best">베스트</span>
-                <em
-                  :style="{backgroundImage: `url('${customBackgroundUrl(item.IMG_PATH_NM)}')`}"
-                  :data-image-src="customBackgroundUrl(item.IMG_PATH_NM)"
-                  class="prod-thumb__image">
-                  <span class="visually-hidden">{{ item.GOODS_NM }} 상세 페이지로 이동</span>
-                </em>
-              </a>
-            </li>
-          </ul>
-        </template>
+        <transition-group v-if="query === searchableKeyword" name="fade" tag="ul" class="prod__list" appear>
+          <ProductItem v-for="(item, prodIndex) in searchResult[0].Result" :key="prodIndex + 0" :item="item" class="prod__item" />
+        </transition-group>
         <template v-else>
           <IconCaution size="100" color="#e6e6e6" />
           <p class="search-result__notice">
@@ -125,6 +106,7 @@
 
 <script>
 import axios from 'axios'
+import ProductItem from '@/components/ProductItem'
 import IconBack from '@/components/icon/IconBack'
 import IconDel from '@/components/icon/IconDel'
 import IconMenu from '@/components/icon/IconMenu'
@@ -171,7 +153,7 @@ export default {
       const areaArr = ePath.map(el => el.className)
       const linkIdx = areaArr.indexOf('search-rank__link')
 
-      this.query = ePath[linkIdx].innerText.replace('\n', '')
+      this.query = ePath[linkIdx].innerText.split('\n').join('')
       this.onSubmit()
     },
     onResult: function (e) {
@@ -179,7 +161,7 @@ export default {
       const areaArr = ePath.map(el => el.className)
       const linkIdx = areaArr.indexOf('search__link')
 
-      this.query = ePath[linkIdx].innerText.replace('\n', '')
+      this.query = ePath[linkIdx].innerText.split('\n').join('')
       this.onSubmit()
     },
     onSubmit: function (e) {
@@ -277,9 +259,6 @@ export default {
           el[tProperty] = el[sProperty]
         }
       })
-    },
-    customBackgroundUrl: function (url) {
-      return url ? `https://image.oliveyoung.co.kr/uploads/images/goods/${url}` : 'none'
     }
   },
   computed: {},
@@ -299,6 +278,7 @@ export default {
   mounted () {
   },
   components: {
+    ProductItem,
     InputText,
     IconBack,
     IconMenu,
@@ -311,6 +291,7 @@ export default {
 
 <style lang="scss" scoped>
 $highlight : #f27370;
+$brandColor: #9bce26;
 .search__section {
   display: flex;
   flex-direction: column;
@@ -321,7 +302,7 @@ $highlight : #f27370;
   top: 0;
   padding: 8px 20px 8px 16px;
   background-color: #fff;
-  border-bottom: solid 2px #9bce26;
+  border-bottom: solid 2px $brandColor;
   z-index: 10;
 }
 .search-main {
@@ -564,57 +545,9 @@ $highlight : #f27370;
   flex: 1 1 auto;
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 0 16px;
-}
-.prod__item {
-  flex: 0 0 auto;
-  display: flex;
-  flex-direction: column;
-  width: calc(50% - 8px);
-}
-.prod-thumb__link {
-  flex: 1 1 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  margin: 8px 0;
-  background-color: #efefef;
-}
-.prod-thumb__image {
-  flex: 0 1 auto;
-  width: 160px;
-  display: block;
-  background: center center / cover no-repeat;
-  mix-blend-mode: multiply;
-  &:before {
-    display: block;
-    padding-bottom: 100%;
-    // background-image: attr(data-image-src);
-    // background-image: 'url(' attr(data-image-src) ')';
-    content: "";
-  }
-}
-.prod-thumb__flag {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  width: 42px;
-  height: 42px;
-  font-weight: 700;
-  font-size: 12px;
-  color: transparent;
-  border: 3px solid transparent;
-  background-color: #dedede;
-  z-index: 1;
-  &--best {
-    color: #fff;
-    background-color: $highlight;
-  }
 }
 </style>
