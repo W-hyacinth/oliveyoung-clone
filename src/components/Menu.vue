@@ -3,7 +3,7 @@
     <nav class="olive-menu" ref="menuMenu">
       <router-link
         v-for="(item, menuIndex) in menuList" :key="menuIndex"
-        :aria-current="item.path.indexOf($route.path) >= 0 ? 'page' : false"
+        :aria-current="currentLocation.indexOf(item.path) >= 0 ? 'page' : false"
         :to="item.path"
         class="olive-menu__link">
           <span class="olive-menu__name">{{ item.name }}</span>
@@ -63,6 +63,11 @@ export default {
           path: '/comingSoon'
         }
       ]
+    }
+  },
+  computed: {
+    currentLocation: function () {
+      return window.location.href
     }
   }
 }
